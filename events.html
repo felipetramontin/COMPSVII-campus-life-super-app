@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Events — MVP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="bg-primary text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3">Campus Events</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="map.html">Campus Map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <h2>Events (MVP)</h2>
+    <p>This page contains a simple events list. In a full version you would connect to a campus events API (or Google Calendar / Eventbrite) with an API key. For the MVP we demonstrate how to fetch and display dynamic content from a JSON placeholder and provide controls to filter by 24-hour timeframe.</p>
+
+    <div class="mb-3">
+      <label for="filterTime" class="form-label">Show events from:</label>
+      <select id="filterTime" class="form-select" aria-label="Filter events by time">
+        <option value="24">Last 24 hours</option>
+        <option value="168">Last 7 days</option>
+        <option value="0">All</option>
+      </select>
+    </div>
+
+    <ul id="eventsList" class="list-group" aria-live="polite">
+      <!-- events injected here -->
+    </ul>
+
+  </main>
+
+  <footer class="bg-light py-3 mt-4">
+    <div class="container text-center small">
+      <p><a href="index.html">Back to home</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
