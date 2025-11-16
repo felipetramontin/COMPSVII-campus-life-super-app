@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
   <header class="bg-primary text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
       <h1 class="h3" id="brand">Campus Life Super App</h1>
@@ -25,6 +25,47 @@
       </nav>
     </div>
   </header>
+
+  <main class="container my-4" id="main">
+    <section aria-labelledby="welcome-title">
+      <h2 id="welcome-title">Welcome</h2>
+      <p>Fast, simple tools for student life: local weather, events and a campus map. This MVP demonstrates the required
+        structure, Bootstrap integration, semantic HTML, accessibility touches, and two external APIs (Open-Meteo and
+        Nominatim/OSM).</p>
+    </section>
+
+    <section class="row my-4" aria-labelledby="quick-tools">
+      <h3 id="quick-tools" class="col-12">Quick Tools</h3>
+
+      <article class="col-md-6" aria-labelledby="weather-title">
+        <h4 id="weather-title">Local Weather</h4>
+        <p id="weather-desc">Click the button to get your current weather using the Open-Meteo API.</p>
+        <button id="getWeatherBtn" class="btn btn-outline-primary" aria-controls="weatherCard">Get Weather</button>
+
+        <div id="weatherCard" class="card mt-3 visually-hidden" role="region" aria-live="polite">
+          <div class="card-body">
+            <h5 class="card-title" id="weatherLocation"></h5>
+            <p id="weatherInfo" class="card-text"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-md-6" aria-labelledby="events-title">
+        <h4 id="events-title">Events Preview</h4>
+        <p>See upcoming campus events (placeholder and demo API usage). Click to go to the Events page for more.</p>
+        <a href="events.html" class="btn btn-outline-secondary">Open Events</a>
+      </article>
+    </section>
+
+    <section aria-labelledby="accessibility" class="my-4">
+      <h3 id="accessibility">Accessibility notes</h3>
+      <ul>
+        <li>Semantic headings and landmarks</li>
+        <li>Buttons include aria-controls / aria-live where appropriate</li>
+        <li>Color contrast uses Bootstrap utilities</li>
+      </ul>
+    </section>
+  </main>
 
   <footer class="bg-light py-3 mt-4">
     <div class="container text-center small">
